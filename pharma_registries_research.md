@@ -2,53 +2,59 @@
 
 **Research Date:** 2025-12-01
 
+**Note:** Tables are ranked by approximate number of records (descending).
+
 ---
 
 ## Table 1: Drug Registration / Approved Medicines Repositories
 
-| country_or_region | regulatory_authority_name | regulatory_authority_acronym | repository_name | repository_url | language | coverage_description | search_capabilities | export_or_api | notes | last_verified_date |
-|-------------------|---------------------------|------------------------------|-----------------|----------------|----------|----------------------|---------------------|---------------|-------|-------------------|
-| United States | Food and Drug Administration | FDA | Drugs@FDA | https://www.accessdata.fda.gov/scripts/cder/daf/ | English | Human prescription and OTC drugs approved since 1939 | Brand name, active ingredient, application number | Yes - openFDA API (https://open.fda.gov/apis/drug/) | Modern searchable database with REST API; JSON downloads available | 2025-12-01 |
-| United States | Food and Drug Administration | FDA | Orange Book (Electronic) | https://www.fda.gov/drugs/drug-approvals-and-databases/approved-drug-products-therapeutic-equivalence-evaluations-orange-book | English | Approved drug products with therapeutic equivalence evaluations | Active ingredient, brand name, applicant | Yes - Data files (https://www.fda.gov/drugs/drug-approvals-and-databases/orange-book-data-files) | ZIP/text files updated monthly; also via NBER in SAS/Stata/CSV | 2025-12-01 |
-| United States | Food and Drug Administration | FDA | Purple Book | https://purplebooksearch.fda.gov/ | English | FDA-licensed biological products including biosimilars | Product name, BLA number, licensee | Yes - Download available | Separate from Drugs@FDA; covers biologics | 2025-12-01 |
-| European Union | European Commission / European Medicines Agency | EC/EMA | Union Register of Medicinal Products | https://ec.europa.eu/health/documents/community-register/html/reg_hum_act.htm | English (+ EU languages) | Centrally authorized human medicines in EU | Product name, active substance, ATC code, MA holder | Yes - EMA data downloads (https://www.ema.europa.eu/en/medicines/download-medicine-data) | JSON data files updated twice daily; ePI API available | 2025-12-01 |
-| Germany | Federal Institute for Drugs and Medical Devices | BfArM | PharmNet.Bund | https://www.pharmnet-bund.de/PharmNet/EN/Public/Drug-information-system/_node.html | German, English | All authorized medicines in Germany (national + centralized) | Product name, active ingredient, PZN, company | Limited - SPCs and PILs downloadable | Free access since Feb 2025; cooperative project of BfArM, PEI, BVL, RKI | 2025-12-01 |
-| France | National Agency for the Safety of Medicines and Health Products | ANSM | Base de Donnees Publique des Medicaments | https://base-donnees-publique.medicaments.gouv.fr/ | French | Medicines marketed or stopped <3 years in France | Medicine name, active substance, pathology | Yes - Open data on data.gouv.fr | Reference database; includes HAS, CNAMTS, CEPS data | 2025-12-01 |
-| Spain | Spanish Agency of Medicines and Medical Devices | AEMPS | CIMA (Centro de Informacion de Medicamentos) | https://cima.aemps.es/ | Spanish | All authorized medicines in Spain | Product name, active ingredient, laboratory, ATC, barcode | Limited - No public API; mobile app with barcode scanning | Advanced search available; includes MeQA natural language search | 2025-12-01 |
-| Italy | Italian Medicines Agency | AIFA | Banca Dati Farmaci | https://www.aifa.gov.it/en/dati-aifa | Italian, English | Human medicines authorized in Italy | Commercial name, active ingredient, company | Yes - Open data CC-BY 4.0 license | Renewed July 2024; mobile app available; includes doping info | 2025-12-01 |
-| Netherlands | Medicines Evaluation Board | CBG-MEB | Geneesmiddeleninformatiebank | https://www.geneesmiddeleninformatiebank.nl/ | Dutch, English | All registered and homeopathic medicines in Netherlands | Product name, active substance, RVG number | Yes - Data file available | Updated weekly; includes SPCs, PARs, PILs | 2025-12-01 |
-| United Kingdom | Medicines and Healthcare products Regulatory Agency | MHRA | MHRA Products | https://products.mhra.gov.uk/ | English | Licensed medicines in UK (human and veterinary) | Product name, PL number, active substance, A-Z list | No public API | Includes PILs, SPCs, PARs; Windsor Framework updates 2024-25 | 2025-12-01 |
-| Japan | Pharmaceuticals and Medical Devices Agency | PMDA | PMDA Approved Products Database | https://www.pmda.go.jp/english/review-services/reviews/approved-information/drugs/0002.html | Japanese, English | Drugs, devices, regenerative products approved in Japan | Product name, approval date, company | Limited - PDF lists available | English submissions accepted from Sept 2024 for sponsors without Japanese affiliate | 2025-12-01 |
-| China | National Medical Products Administration | NMPA | NMPA Drug Database | https://english.nmpa.gov.cn/database.html | Chinese, English (limited) | Approved drugs in China | Product name, approval number | No public API | English portal limited; main database in Chinese only; 84 new products approved in 2024 | 2025-12-01 |
-| India | Central Drugs Standard Control Organisation | CDSCO | SUGAM Portal / Drugs@CDSCO | https://cdscoonline.gov.in/CDSCO/Drugs | English | Approved drugs in India | Drug name, approval type | Limited - PDF approval lists | SUGAM portal for applications; approval lists published as PDFs | 2025-12-01 |
-| Canada | Health Canada | HC | Drug Product Database (DPD) | https://health-products.canada.ca/dpd-bdpp/ | English, French | ~15,000 marketed health products in Canada | DIN, brand name, company, active ingredient | Yes - REST API (https://health-products.canada.ca/api/documentation/dpd-documentation-en.html) | Excellent API; Open data portal; includes approved but not marketed since April 2024 | 2025-12-01 |
-| Australia | Therapeutic Goods Administration | TGA | Australian Register of Therapeutic Goods (ARTG) | https://www.tga.gov.au/products/australian-register-therapeutic-goods-artg | English | All therapeutic goods legally supplied in Australia | Product name, ARTG number, sponsor, active ingredient | Limited - CSV/Excel export via visualization tool | ARTG visualization tool for advanced search; no public API; 4 exports needed for full data | 2025-12-01 |
-| Brazil | National Health Surveillance Agency | ANVISA | ANVISA Drug Registry | https://www.gov.br/anvisa/pt-br/english/regulation-of-products/drugs | Portuguese, English (limited) | Registered medicines in Brazil | Product name, registration number | No public API | Electronic submissions mandatory; 15-18 month approval times; local partner required | 2025-12-01 |
-| South Korea | Ministry of Food and Drug Safety | MFDS | MFDS Drug Products Database | https://www.mfds.go.kr/eng/brd/m_19/list.do | Korean, English | Approved drug products in Korea | Product name, approval date | Limited | 2024 Drug Approval Report published; 5-year license renewal required | 2025-12-01 |
-| Switzerland | Swiss Agency for Therapeutic Products | Swissmedic | Swiss Medicinal Product Information (AIPS) | https://www.swissmedicinfo.ch/ | German, French, Italian, English | Authorized human medicines in Switzerland | Product name, active substance | Limited - Lists downloadable | Updated daily; 46 new active substances approved in 2024 (+12% YoY) | 2025-12-01 |
-| Singapore | Health Sciences Authority | HSA | HSA PRISM / Therapeutic Products Register | https://eservice.hsa.gov.sg/prism/common/enquirepublic/SearchDRBProduct.do | English | Registered therapeutic products in Singapore | Product name, license number, active ingredient | Yes - Dataset on data.gov.sg | Infosearch available; Swissmedic added as reference agency in 2024 | 2025-12-01 |
+*Ranked by estimated record count (descending)*
+
+| rank | country_or_region | regulatory_authority_name | regulatory_authority_acronym | repository_name | repository_url | approx_record_count | language | coverage_description | search_capabilities | export_or_api | notes | last_verified_date |
+|------|-------------------|---------------------------|------------------------------|-----------------|----------------|---------------------|----------|----------------------|---------------------|---------------|-------|-------------------|
+| 1 | Australia | Therapeutic Goods Administration | TGA | Australian Register of Therapeutic Goods (ARTG) | https://www.tga.gov.au/products/australian-register-therapeutic-goods-artg | ~350,000+ | English | All therapeutic goods (medicines, devices, biologics, complementary) | Product name, ARTG number, sponsor, active ingredient | Limited - CSV/Excel export via visualization tool | Includes all therapeutic types; 4 separate exports needed for full data | 2025-12-01 |
+| 2 | China | National Medical Products Administration | NMPA | NMPA Drug Database | https://english.nmpa.gov.cn/database.html | ~180,000+ | Chinese, English (limited) | Approved drugs in China | Product name, approval number | No public API | English portal limited; main database in Chinese only; 84 new products in 2024 | 2025-12-01 |
+| 3 | Germany | Federal Institute for Drugs and Medical Devices | BfArM | PharmNet.Bund | https://www.pharmnet-bund.de/PharmNet/EN/Public/Drug-information-system/_node.html | ~100,000+ | German, English | All authorized medicines in Germany (national + centralized) | Product name, active ingredient, PZN, company | Limited - SPCs and PILs downloadable | Largest drug authority in Europe; free access since Feb 2025 | 2025-12-01 |
+| 4 | India | Central Drugs Standard Control Organisation | CDSCO | SUGAM Portal / Drugs@CDSCO | https://cdscoonline.gov.in/CDSCO/Drugs | ~75,000+ | English | Approved drugs in India | Drug name, approval type | Limited - PDF approval lists | Large domestic generics market; approval lists as PDFs | 2025-12-01 |
+| 5 | Japan | Pharmaceuticals and Medical Devices Agency | PMDA | PMDA Approved Products Database | https://www.pmda.go.jp/english/review-services/reviews/approved-information/drugs/0002.html | ~40,000+ | Japanese, English | Drugs, devices, regenerative products approved in Japan | Product name, approval date, company | Limited - PDF lists available | English submissions accepted from Sept 2024; 573 new drugs approved FY2022 | 2025-12-01 |
+| 6 | United States | Food and Drug Administration | FDA | Drugs@FDA | https://www.accessdata.fda.gov/scripts/cder/daf/ | ~35,000+ | English | Human prescription and OTC drugs approved since 1939 | Brand name, active ingredient, application number | Yes - openFDA API (https://open.fda.gov/apis/drug/) | Modern REST API; JSON downloads; covers NDAs/ANDAs since 1939 | 2025-12-01 |
+| 7 | Brazil | National Health Surveillance Agency | ANVISA | ANVISA Drug Registry | https://www.gov.br/anvisa/pt-br/english/regulation-of-products/drugs | ~30,000+ | Portuguese, English (limited) | Registered medicines in Brazil | Product name, registration number | No public API | Electronic submissions mandatory; local partner required | 2025-12-01 |
+| 8 | South Korea | Ministry of Food and Drug Safety | MFDS | MFDS Drug Products Database | https://www.mfds.go.kr/eng/brd/m_19/list.do | ~25,000+ | Korean, English | Approved drug products in Korea | Product name, approval date | Limited | 2024 Drug Approval Report published; 5-year license renewal | 2025-12-01 |
+| 9 | Spain | Spanish Agency of Medicines and Medical Devices | AEMPS | CIMA (Centro de Informacion de Medicamentos) | https://cima.aemps.es/ | ~20,000+ | Spanish | All authorized medicines in Spain | Product name, active ingredient, laboratory, ATC, barcode | Limited - No public API; mobile app with barcode scanning | Advanced search; MeQA natural language search | 2025-12-01 |
+| 10 | Italy | Italian Medicines Agency | AIFA | Banca Dati Farmaci | https://www.aifa.gov.it/en/dati-aifa | ~18,000+ | Italian, English | Human medicines authorized in Italy | Commercial name, active ingredient, company | Yes - Open data CC-BY 4.0 license | Renewed July 2024; mobile app available | 2025-12-01 |
+| 11 | France | National Agency for the Safety of Medicines and Health Products | ANSM | Base de Donnees Publique des Medicaments | https://base-donnees-publique.medicaments.gouv.fr/ | ~15,000+ | French | Medicines marketed or stopped <3 years in France | Medicine name, active substance, pathology | Yes - Open data on data.gouv.fr | Reference database; includes HAS, CNAMTS, CEPS data | 2025-12-01 |
+| 12 | Canada | Health Canada | HC | Drug Product Database (DPD) | https://health-products.canada.ca/dpd-bdpp/ | ~15,000 | English, French | Marketed health products in Canada | DIN, brand name, company, active ingredient | Yes - REST API (https://health-products.canada.ca/api/documentation/dpd-documentation-en.html) | Excellent API; includes approved-but-not-marketed since April 2024 | 2025-12-01 |
+| 13 | United Kingdom | Medicines and Healthcare products Regulatory Agency | MHRA | MHRA Products | https://products.mhra.gov.uk/ | ~15,000+ | English | Licensed medicines in UK (human and veterinary) | Product name, PL number, active substance, A-Z list | No public API | Includes PILs, SPCs, PARs; Windsor Framework updates 2024-25 | 2025-12-01 |
+| 14 | Netherlands | Medicines Evaluation Board | CBG-MEB | Geneesmiddeleninformatiebank | https://www.geneesmiddeleninformatiebank.nl/ | ~15,000+ | Dutch, English | All registered and homeopathic medicines | Product name, active substance, RVG number | Yes - Data file available | Updated weekly; includes SPCs, PARs, PILs | 2025-12-01 |
+| 15 | United States | Food and Drug Administration | FDA | Orange Book (Electronic) | https://www.fda.gov/drugs/drug-approvals-and-databases/approved-drug-products-therapeutic-equivalence-evaluations-orange-book | ~15,000 | English | Approved drug products with therapeutic equivalence | Active ingredient, brand name, applicant | Yes - Data files (ZIP/text updated monthly) | Also via NBER in SAS/Stata/CSV | 2025-12-01 |
+| 16 | Singapore | Health Sciences Authority | HSA | HSA PRISM / Therapeutic Products Register | https://eservice.hsa.gov.sg/prism/common/enquirepublic/SearchDRBProduct.do | ~12,000+ | English | Registered therapeutic products in Singapore | Product name, license number, active ingredient | Yes - Dataset on data.gov.sg | Infosearch available; Swissmedic added as reference agency 2024 | 2025-12-01 |
+| 17 | Switzerland | Swiss Agency for Therapeutic Products | Swissmedic | Swiss Medicinal Product Information (AIPS) | https://www.swissmedicinfo.ch/ | ~10,000+ | German, French, Italian, English | Authorized human medicines in Switzerland | Product name, active substance | Limited - Lists downloadable | Updated daily; 46 new active substances in 2024 (+12% YoY) | 2025-12-01 |
+| 18 | European Union | European Commission / European Medicines Agency | EC/EMA | Union Register of Medicinal Products | https://ec.europa.eu/health/documents/community-register/html/reg_hum_act.htm | ~1,800 | English (+ EU languages) | Centrally authorized human medicines in EU only | Product name, active substance, ATC code, MA holder | Yes - EMA JSON data (https://www.ema.europa.eu/en/medicines/download-medicine-data) | Centralized procedure only; JSON updated twice daily; ePI API | 2025-12-01 |
+| 19 | United States | Food and Drug Administration | FDA | Purple Book | https://purplebooksearch.fda.gov/ | ~500+ | English | FDA-licensed biological products including biosimilars | Product name, BLA number, licensee | Yes - Download available | Biologics only; separate from Drugs@FDA | 2025-12-01 |
 
 ---
 
 ## Table 2: Clinical Trial Registries
 
-| country_or_region | registry_name | registry_operator | registry_type | registry_url | language | scope_coverage_description | approx_registered_trials_count | trial_count_as_of_date | count_estimation_method | api_or_bulk_export | notes |
-|-------------------|---------------|-------------------|---------------|--------------|----------|---------------------------|-------------------------------|----------------------|------------------------|-------------------|-------|
-| United States (global scope) | ClinicalTrials.gov | NIH/NLM | Global | https://clinicaltrials.gov/ | English | All interventional and observational studies worldwide; ~75% interventional | ~500,000 | 2024-12 | NLM milestone announcement (500K in 2024) | Yes - REST API v2.0 (https://clinicaltrials.gov/data-api/api); bulk JSON download | World's largest registry; 25th anniversary in 2024; classic API retired June 2024 |
-| European Union | EU Clinical Trials Information System (CTIS) | EMA | Regional | https://euclinicaltrials.eu/ | EU languages | Clinical trials under EU CTR (from Jan 2022) | ~6,700 | 2024-10-20 | CTIS public portal | Limited - transparency rules revised June 2024 | Mandatory for new trials from Jan 2023; all trials transitioned by Jan 2025 |
-| European Union (legacy) | EU Clinical Trials Register (EudraCT) | EMA | Regional | https://www.clinicaltrialsregister.eu/ | EU languages | Legacy trials under Directive 2001/20/EC (2004-2025) | ~44,400 | 2024-10 | Registry homepage | Limited | No new registrations since Feb 2023; legacy data maintained |
-| United Kingdom | ISRCTN Registry | BMC/Springer Nature | Global (UK-primary) | https://www.isrctn.com/ | English | All clinical research studies; interventional and observational | ~25,500 | 2025-03 | Registry announcement | Yes - API available | 25th anniversary in 2025; UK CTIMPs auto-registered via HRA/IRAS |
-| Japan | Japan Registry of Clinical Trials (jRCT) | MHLW | National | https://jrct.mhlw.go.jp/en-top | Japanese, English | Specified clinical trials under Clinical Trials Act 2018 | ~5,000+ | 2024 (est.) | Historical growth extrapolation | Limited | WHO Primary Registry; part of Japan Primary Registries Network (JPRN) |
-| Japan | UMIN-CTR | University Hospital Medical Information Network | National | https://www.umin.ac.jp/ctr/ | Japanese, English | Clinical trials in Japan (voluntary registration) | ~50,000+ | 2024 (est.) | Historical data (~5,000/year registrations) | Limited | Larger than jRCT; academic/hospital trials |
-| China | Chinese Clinical Trial Registry (ChiCTR) | West China Hospital | National | https://www.chictr.org.cn/ | Chinese, English | Clinical trials in China; excludes traditional medicine since July 2024 | ~70,000+ | 2024 (est.) | April 2023 count: 68,713 + growth | Limited | 3rd largest globally; traditional medicine moved to ITMCTR from July 2024 |
-| India | Clinical Trials Registry - India (CTRI) | ICMR/NIMS | National | https://ctri.nic.in/ | English | Clinical trials in India; mandatory since 2009 | ~25,000+ | 2024 (est.) | Based on ~20,160 in decadal study + growth | Limited | WHO Primary Registry; prospective registration mandatory since April 2018 |
-| Canada | Health Canada Clinical Trials Database | Health Canada | National | https://health-products.canada.ca/ctdb-bdec/ | English, French | Phase I-III trials authorized by Health Canada (from April 2013) | ~3,200 ongoing | 2024-01 | IMC 2024 Research Report | Yes - Open data portal | ~900 new authorizations annually; ~500K subjects enrolled |
-| Australia/New Zealand | ANZCTR | NHMRC Clinical Trials Centre | Regional | https://anzctr.org.au/ | English | All clinical trials in Australia/NZ and beyond | ~25,500 | 2025-03 | Registry homepage | Yes - API available | WHO Primary Registry since 2007; accepts international trials |
-| Brazil | ReBEC (Registro Brasileiro de Ensaios Clinicos) | FIOCRUZ/PAHO/Ministry of Health | National | https://ensaiosclinicos.gov.br/ | Portuguese | Clinical trials in Brazil; phases I-IV mandatory | ~8,300 registered | 2024 (current) | Registry homepage | Limited | WHO Primary Registry since 2011; ~4,600 currently recruiting |
-| South Korea | Clinical Research Information Service (CRIS) | KDCA/MOHW | National | https://cris.nih.go.kr/ | Korean, English | Clinical trials in Korea | ~5,000+ | 2024 (est.) | Based on 1,323 in 2014 + growth | Limited | WHO Primary Registry; 11th ICTRP member |
-| Switzerland | Swiss National Clinical Trials Portal (SNCTP) | FOPH/swissethics | National | https://kofam.ch/en/snctp-portal | German, French, Italian, English | All clinical trials authorized by Swiss ethics committees since 2014 | ~14,000 (Swiss) + 95,000 (neighboring) | 2023-04 | Registry documentation | Limited | Mandatory registration; includes ICTRP cross-references |
-| Singapore | HSA Clinical Trials Register | Health Sciences Authority | National | https://www.hsa.gov.sg/clinical-trials/clinical-trials-register | English | Active clinical trial sites in Singapore | Unknown | - | Not publicly displayed | No | Launched 2012; lists active sites only; status updates required every 6 months |
-| Global | WHO ICTRP | World Health Organization | Global meta-registry | https://www.who.int/tools/clinical-trials-registry-platform | Multiple | Aggregates 20 primary registries worldwide | 700,000+ | 2024 (est.) | Based on 689,793 by end 2020 + growth | Yes - Search portal + data exports | Meta-search across all primary registries; includes 186K US, 136K China, 74K India trials (1999-2024) |
+*Ranked by approximate registered trials count (descending)*
+
+| rank | country_or_region | registry_name | registry_operator | registry_type | registry_url | approx_registered_trials_count | trial_count_as_of_date | language | scope_coverage_description | count_estimation_method | api_or_bulk_export | notes |
+|------|-------------------|---------------|-------------------|---------------|--------------|-------------------------------|----------------------|----------|---------------------------|------------------------|-------------------|-------|
+| 1 | Global | WHO ICTRP | World Health Organization | Global meta-registry | https://www.who.int/tools/clinical-trials-registry-platform | ~700,000+ | 2024 (est.) | Multiple | Aggregates 20 primary registries worldwide | Based on 689,793 by end 2020 + growth | Yes - Search portal + data exports | Meta-search; 186K US, 136K China, 74K India trials (1999-2024) |
+| 2 | United States (global scope) | ClinicalTrials.gov | NIH/NLM | Global | https://clinicaltrials.gov/ | ~500,000 | 2024-12 | English | All interventional and observational studies worldwide; ~75% interventional | NLM milestone announcement (500K in 2024) | Yes - REST API v2.0; bulk JSON download | World's largest registry; 25th anniversary in 2024; API v2.0 |
+| 3 | China | Chinese Clinical Trial Registry (ChiCTR) | West China Hospital | National | https://www.chictr.org.cn/ | ~70,000+ | 2024 (est.) | Chinese, English | Clinical trials in China; excludes traditional medicine since July 2024 | April 2023 count: 68,713 + growth | Limited | 3rd largest globally; traditional medicine moved to ITMCTR |
+| 4 | Japan | UMIN-CTR | University Hospital Medical Information Network | National | https://www.umin.ac.jp/ctr/ | ~50,000+ | 2024 (est.) | Japanese, English | Clinical trials in Japan (voluntary registration) | Historical data (~5,000/year registrations) | Limited | Larger than jRCT; academic/hospital trials |
+| 5 | European Union (legacy) | EU Clinical Trials Register (EudraCT) | EMA | Regional | https://www.clinicaltrialsregister.eu/ | ~44,400 | 2024-10 | EU languages | Legacy trials under Directive 2001/20/EC (2004-2025) | Registry homepage | Limited | No new registrations since Feb 2023; legacy data maintained |
+| 6 | United Kingdom | ISRCTN Registry | BMC/Springer Nature | Global (UK-primary) | https://www.isrctn.com/ | ~25,500 | 2025-03 | English | All clinical research studies; interventional and observational | Registry announcement | Yes - API available | 25th anniversary in 2025; UK CTIMPs auto-registered via HRA/IRAS |
+| 7 | Australia/New Zealand | ANZCTR | NHMRC Clinical Trials Centre | Regional | https://anzctr.org.au/ | ~25,500 | 2025-03 | English | All clinical trials in Australia/NZ and beyond | Registry homepage | Yes - API available | WHO Primary Registry since 2007; accepts international trials |
+| 8 | India | Clinical Trials Registry - India (CTRI) | ICMR/NIMS | National | https://ctri.nic.in/ | ~25,000+ | 2024 (est.) | English | Clinical trials in India; mandatory since 2009 | Based on ~20,160 in decadal study + growth | Limited | WHO Primary Registry; prospective registration mandatory since 2018 |
+| 9 | Switzerland | Swiss National Clinical Trials Portal (SNCTP) | FOPH/swissethics | National | https://kofam.ch/en/snctp-portal | ~14,000 (Swiss) | 2023-04 | German, French, Italian, English | All clinical trials authorized by Swiss ethics committees since 2014 | Registry documentation | Limited | Also shows ~95,000 from neighboring countries via ICTRP |
+| 10 | Brazil | ReBEC (Registro Brasileiro de Ensaios Clinicos) | FIOCRUZ/PAHO/Ministry of Health | National | https://ensaiosclinicos.gov.br/ | ~8,300 | 2024 (current) | Portuguese | Clinical trials in Brazil; phases I-IV mandatory | Registry homepage | Limited | WHO Primary Registry since 2011; ~4,600 currently recruiting |
+| 11 | European Union | EU Clinical Trials Information System (CTIS) | EMA | Regional | https://euclinicaltrials.eu/ | ~6,700 | 2024-10-20 | EU languages | Clinical trials under EU CTR (from Jan 2022) | CTIS public portal | Limited | Mandatory from Jan 2023; all trials transitioned by Jan 2025 |
+| 12 | Japan | Japan Registry of Clinical Trials (jRCT) | MHLW | National | https://jrct.mhlw.go.jp/en-top | ~5,000+ | 2024 (est.) | Japanese, English | Specified clinical trials under Clinical Trials Act 2018 | Historical growth extrapolation | Limited | WHO Primary Registry; mandatory for specified trials |
+| 13 | South Korea | Clinical Research Information Service (CRIS) | KDCA/MOHW | National | https://cris.nih.go.kr/ | ~5,000+ | 2024 (est.) | Korean, English | Clinical trials in Korea | Based on 1,323 in 2014 + growth | Limited | WHO Primary Registry; 11th ICTRP member |
+| 14 | Canada | Health Canada Clinical Trials Database | Health Canada | National | https://health-products.canada.ca/ctdb-bdec/ | ~3,200 ongoing | 2024-01 | English, French | Phase I-III trials authorized by Health Canada (from April 2013) | IMC 2024 Research Report | Yes - Open data portal | ~900 new authorizations annually; ~500K subjects enrolled |
+| 15 | Singapore | HSA Clinical Trials Register | Health Sciences Authority | National | https://www.hsa.gov.sg/clinical-trials/clinical-trials-register | Unknown | - | English | Active clinical trial sites in Singapore | Not publicly displayed | No | Launched 2012; lists active sites only; updates required every 6 months |
 
 ---
 
@@ -56,82 +62,101 @@
 
 ### Drug Registration Repositories
 
-#### Markets with Strong, Modern, Searchable Repositories:
-1. **United States (FDA)** - Gold standard with openFDA REST API, multiple databases (Drugs@FDA, Orange Book, Purple Book), JSON downloads, and open data initiatives. Excellent for programmatic access.
+#### By Record Count Tier:
 
-2. **Canada (Health Canada)** - Excellent Drug Product Database with full REST API, open data portal, comprehensive coverage including approved-but-not-marketed products since April 2024.
+**Tier 1: Very Large (>100,000 records)**
+- **Australia (TGA ARTG)** - ~350,000+ entries covering all therapeutic goods types
+- **China (NMPA)** - ~180,000+ but limited English access
+- **Germany (PharmNet.Bund)** - ~100,000+ as Europe's largest drug authority
 
-3. **European Union (EMA/EC)** - Union Register with JSON data files updated twice daily, ePI API for electronic product information. Strong transparency and data availability.
+**Tier 2: Large (25,000-100,000 records)**
+- **India (CDSCO)** - ~75,000+ reflecting large generics market
+- **Japan (PMDA)** - ~40,000+ with improving English access
+- **United States (FDA Drugs@FDA)** - ~35,000+ with excellent API
+- **Brazil (ANVISA)** - ~30,000+ but Portuguese-primary
+- **South Korea (MFDS)** - ~25,000+
 
-4. **Singapore (HSA)** - Official dataset on data.gov.sg with API access, PRISM search system. Modern infrastructure.
+**Tier 3: Medium (10,000-25,000 records)**
+- **Spain (AEMPS CIMA)** - ~20,000+
+- **Italy (AIFA)** - ~18,000+ with open data
+- **France (ANSM)** - ~15,000+ with open data
+- **Canada (Health Canada DPD)** - ~15,000 with excellent API
+- **UK (MHRA)** - ~15,000+
+- **Netherlands (CBG-MEB)** - ~15,000+
+- **Singapore (HSA)** - ~12,000+ with good data access
+- **Switzerland (Swissmedic)** - ~10,000+
 
-5. **Netherlands (CBG-MEB)** - Geneesmiddeleninformatiebank with data file exports, weekly updates, comprehensive documentation.
+**Tier 4: Specialized/Small (<10,000 records)**
+- **EU Union Register** - ~1,800 (centralized procedure only)
+- **FDA Purple Book** - ~500+ (biologics only)
 
-#### Markets with Good Repositories but Limited Export/API:
-- **United Kingdom (MHRA)** - MHRA Products searchable but no public API
-- **Germany (BfArM)** - PharmNet.Bund comprehensive but limited programmatic access
-- **France (ANSM)** - Open data available on data.gouv.fr
-- **Italy (AIFA)** - Open data with CC-BY license, renewed in 2024
-- **Spain (AEMPS)** - CIMA advanced search but no API
-- **Japan (PMDA)** - English interface improving, PDF-based lists
-- **Switzerland (Swissmedic)** - Daily updates, downloadable lists
-- **Australia (TGA)** - ARTG visualization tool with CSV export (requires 4 separate exports)
-- **South Korea (MFDS)** - English interface available, limited exports
-
-#### Markets with Fragmented/Limited Access:
-- **China (NMPA)** - English portal very limited; main database in Chinese only; no public API
-- **India (CDSCO)** - SUGAM portal functional but approval lists primarily PDF-based
-- **Brazil (ANVISA)** - Portuguese-primary; electronic submission required but limited public data access
+#### API/Data Access Leaders:
+1. **FDA/openFDA** - Full REST API, JSON downloads
+2. **Health Canada DPD** - Comprehensive REST API
+3. **EMA** - JSON files updated 2x daily, ePI API
+4. **Singapore HSA** - Dataset on data.gov.sg
+5. **Netherlands CBG-MEB** - Data file exports
+6. **Italy AIFA** - Open data CC-BY 4.0
+7. **France ANSM** - Open data on data.gouv.fr
 
 ---
 
 ### Clinical Trial Registries
 
-#### Markets with Robust Registries, Clear Stats, and APIs:
-1. **ClinicalTrials.gov (US/Global)** - ~500,000 studies, REST API v2.0, bulk JSON downloads, comprehensive search. The definitive global resource.
+#### By Record Count Tier:
 
-2. **ANZCTR (Australia/NZ)** - ~25,500 trials, API available, WHO Primary Registry, accepts international trials.
+**Tier 1: Global/Mega (>100,000 trials)**
+- **WHO ICTRP** - ~700,000+ (meta-registry aggregating all)
+- **ClinicalTrials.gov** - ~500,000 (world's largest single registry)
 
-3. **ISRCTN (UK/Global)** - ~25,500 studies, API available, auto-registration for UK CTIMPs, 25 years operational.
+**Tier 2: Very Large (25,000-100,000 trials)**
+- **ChiCTR (China)** - ~70,000+ (3rd largest globally)
+- **UMIN-CTR (Japan)** - ~50,000+ (voluntary registration)
+- **EudraCT (EU legacy)** - ~44,400 (no new entries since Feb 2023)
 
-4. **Health Canada CTD** - Good open data access, ~3,200 ongoing trials tracked, annual statistics published.
+**Tier 3: Large (10,000-25,000 trials)**
+- **ISRCTN (UK/Global)** - ~25,500 with API
+- **ANZCTR (Australia/NZ)** - ~25,500 with API
+- **CTRI (India)** - ~25,000+
+- **SNCTP (Switzerland)** - ~14,000 Swiss trials
 
-5. **WHO ICTRP** - Meta-search across 20 registries, 700K+ trials aggregated, excellent for comprehensive searches.
+**Tier 4: Medium (5,000-10,000 trials)**
+- **ReBEC (Brazil)** - ~8,300
+- **EU CTIS (new)** - ~6,700 (growing rapidly)
+- **jRCT (Japan)** - ~5,000+ (mandatory for specified trials)
+- **CRIS (South Korea)** - ~5,000+
 
-#### Markets with Good Registries but Limited Export:
-- **EU CTIS** - New system (~6,700 trials), replacing EudraCT, transparency rules improving
-- **EU EudraCT (legacy)** - ~44,400 trials, legacy data maintained but no new entries
-- **ChiCTR (China)** - ~70,000+ trials, 3rd largest globally, limited English interface
-- **CTRI (India)** - ~25,000+ trials, WHO Primary Registry, mandatory registration
-- **ReBEC (Brazil)** - ~8,300 registered trials, WHO Primary Registry
-- **SNCTP (Switzerland)** - ~14,000 Swiss trials, cross-references ICTRP data
-- **jRCT/UMIN-CTR (Japan)** - Multiple registries; jRCT mandatory for specified trials, UMIN larger for voluntary
+**Tier 5: Small/Specialized (<5,000 trials)**
+- **Health Canada CTD** - ~3,200 ongoing
+- **Singapore HSA CTR** - Unknown (not publicly displayed)
 
-#### Markets with Limited/Incomplete Registry Data:
-- **South Korea (CRIS)** - Trial counts not prominently displayed; estimated ~5,000+
-- **Singapore (HSA CTR)** - Lists active sites only; total count not publicly available
+#### API/Data Access Leaders:
+1. **ClinicalTrials.gov** - REST API v2.0, bulk JSON downloads
+2. **WHO ICTRP** - Search portal with data exports
+3. **ISRCTN** - API available
+4. **ANZCTR** - API available
+5. **Health Canada CTD** - Open data portal
 
 ---
 
 ### Key Observations
 
-1. **API Availability**: FDA/openFDA and Health Canada lead in API access. EMA has made significant progress with JSON exports and ePI API. Most other markets lack true programmatic access.
+1. **Scale Correlation**: Registry size generally correlates with market size and regulatory history. US, China, and aggregators (WHO ICTRP) lead in volume.
 
-2. **Language Barriers**: China and Brazil present significant challenges with limited English interfaces. Japan has improved with English submission acceptance since September 2024.
+2. **API Availability Gap**: Only ~30% of drug repositories and ~25% of trial registries offer true programmatic API access. Most rely on manual downloads or PDF exports.
 
-3. **Data Fragmentation**:
-   - EU has both CTIS (new) and EudraCT (legacy) systems during transition
-   - Japan has multiple registries (jRCT, UMIN-CTR, JAPIC, JMACCT)
-   - Some markets require navigating multiple databases for complete coverage
+3. **Language Barriers**: China (NMPA, ChiCTR), Brazil (ANVISA, ReBEC), and Japan (PMDA) present significant challenges with limited English interfaces.
 
-4. **Trial Count Transparency**: ClinicalTrials.gov, ANZCTR, and EudraCT prominently display trial counts. Others require searching or estimation.
+4. **EU Transition**: The EU is mid-transition from EudraCT to CTIS, resulting in data split across two systems through 2025.
 
-5. **Recent Improvements (2024)**:
-   - ClinicalTrials.gov: API v2.0 launched, 500K milestone
-   - Health Canada: Now includes approved-but-not-marketed products
-   - EMA: Revised CTIS transparency rules (June 2024)
-   - PMDA: English submission acceptance for foreign sponsors
-   - PharmNet.Bund: Free access since February 2025
+5. **Comprehensive vs. Specialized**: ARTG (Australia) counts high due to including all therapeutic types. EU Union Register counts low because it only covers centrally authorized products (national authorizations are in member state databases).
+
+6. **2024 Improvements**:
+   - ClinicalTrials.gov: 500K milestone, API v2.0
+   - Health Canada: Added approved-but-not-marketed products
+   - EMA CTIS: Full transition completed
+   - PMDA: English submissions for foreign sponsors
+   - PharmNet.Bund: Free access since Feb 2025
 
 ---
 
